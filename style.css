@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+:root {
+    --clr-btn: white;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    background-color: #e5bda7;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+.croll-down {
+    font-size: 20px;
+    color: white;
+    opacity: 60%;
+}
+
+.line_1,
+.line_2,
+.line_3,
+.line_4,
+.line_5,
+.line_6,
+.reveal {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.line_5 img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.reveal img {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+}
+
+button {
+    width: 240px;
+    height: 80px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--clr-btn);
+    border-radius: 10px;
+    border: 5px solid var(--clr-btn);
+    background-color: black;
+    text-shadow: 0 0 10px var(--clr-btn);
+    box-shadow: inset 0 0 5px 1px var(--clr-btn),
+                0 0 2px var(--clr-btn);
+}
+
+button:hover {
+    background-color: var(--clr-btn);
+    color: black;
+    box-shadow: 0 0 20px 5px var(--clr-btn),
+                0 0 10px white;
+    transition: 0.6s;
+}
+
+button:active {
+    transform: scale(0.5);
+}
+
+video {
+    display: none;
+    width: 40%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    video {
+        display: none; 
+        width: 100%;
+        height: auto;
+    }
+} 
