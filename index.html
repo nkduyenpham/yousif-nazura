@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Wedding</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="line_1" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="500">
+        <h1>
+            Hi Yousif and Nazura! <br><br>
+            Duyen has something want to send to you guys ^.^. 
+            <br><br>
+            <em class="croll-down">(scoll down a bit)</em>
+        </h1>
+    </div>
+    <div class="line_2" data-aos="fade-down" data-aos-duration="2000">
+        <h1>Congratulations on your wedding day!</h1>
+        <p>Even though I couldn't be there to celebrate with you in person, my thoughts and well wishes are with you both on this special day.</p>
+        <p class="croll-down">(croll down a bit)</p>
+    </div>
+    <div class="line_3" data-aos="fade-down" data-aos-duration="2000">
+        <h1>To Yousif & Nazura</h1>
+        <p>May your love for each other continue to grow stronger with each passing year. Wishing you both a lifetime of love, joy, and happiness. Sending you both all my love from afar.</p>
+        <p class="croll-down">(croll down a bit, you're almost there)</p>
+    </div>
+    <div class="reveal" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="200">
+        <button>OPEN HERE ^.^</button> 
+        <video controls autoplay playsinline volume="1">
+            <source src="asset/yousif-nazura.mp4" type="video/mp4" alt="Happy Wedding Video">
+        </video>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> 
+        AOS.init();
+    </script>
+    <script src="confetti.js"></script>
+    <script>
+        const btn = document.querySelector('.reveal button');
+        const video = document.querySelector('.reveal video');
+        video.muted = false;
+
+        const start = () => {
+            setTimeout(function() {
+                confetti.start()
+            }, 1000);
+        };
+
+        btn.addEventListener('click', () => {
+            btn.style.display = 'none';
+            video.style.display = 'block'; // make the video visible
+            video.play(); // play the video
+            start();
+        })
+    </script>
+</body>
+</html>
